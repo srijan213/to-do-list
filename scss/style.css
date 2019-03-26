@@ -1,1 +1,89 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css?family=Satisfy");
+*:focus {
+  outline: none;
+}
+
+body {
+  font-family: "Satisfy", cursive;
+  background-color: #efede2;
+}
+
+body header {
+  margin: auto;
+  font-size: 2.5em;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.container {
+  margin: auto;
+  width: 650px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .input--section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1rem;
+}
+
+.container .input--section #input {
+  font-family: "Satisfy", cursive;
+  font-size: 1em;
+  min-width: 500px;
+  height: 1.5em;
+  margin-right: 10px;
+  border: 0;
+  border-bottom: 1px solid black;
+  background: transparent;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.container .input--section #add--button {
+  font-family: "Satisfy", cursive;
+  border: 1px solid black;
+  background: transparent;
+}
+
+.container .input--section #add--button:hover {
+  background: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.container .list > * {
+  margin-right: 0.5em;
+}
+
+.container .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1em;
+}
+
+.container .list .item--desc {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+
+.container .list .delete--icon {
+  margin-right: 0em;
+}
+/*# sourceMappingURL=style.css.map */
