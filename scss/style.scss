@@ -40,7 +40,7 @@ body {
       flex: 2;
     }
 
-    #add--button {
+    .input--button {
       font-family: "Satisfy", cursive;
       border: 1px solid black;
       background: transparent;
@@ -64,8 +64,23 @@ body {
       flex: 3;
     }
 
+    .done--icon {
+      &:hover {
+        color: orange;
+      }
+    }
+
+    .edit--icon {
+      &:hover {
+        color: blue;
+      }
+    }
+
     .delete--icon {
       margin-right: 0em;
+      &:hover {
+        color: red;
+      }
     }
   }
 }

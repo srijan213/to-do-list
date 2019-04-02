@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  $("#edit--button").hide();
   let userInput = "";
   let listItemNumber = 0;
   function userInputFetcher() {
@@ -22,7 +23,12 @@ $(document).ready(function() {
     else {
       listItemNumber += 1;
       listItemAdder(userInput, listItemNumber);
+      $("#input").val("");
     }
+  });
+
+  $("#edit--button").click(function() {
+    alert("Edited");
   });
 
   $(document).on("click", ".delete--icon", function() {
@@ -31,11 +37,27 @@ $(document).ready(function() {
       .remove();
   });
 
+  $(document).on("click", ".edit--icon", function() {
+    $("#add--button").hide();
+    $("#edit--button").show();
+    let item = $(this)
+      .parent()
+      .children(".item--desc");
+    //Set value of Edit Item in Input
+    $("#input").val(item.html());
+    $("#input").focus();
+
+    //Set the value of list item to that of Input
+    $("#input").on("keyup", function() {
+      item.html($(this).val());
+    });
+  });
+
   $(document).on("click", ".done--icon", function() {
     $(this)
       .parent()
       .children(".item--desc")
-      .css("text-decoration", "line-through");
+      .css({ "text-decoration": "line-through" });
 
     $(this)
       .parent()

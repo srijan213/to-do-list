@@ -52,13 +52,13 @@ body header {
           flex: 2;
 }
 
-.container .input--section #add--button {
+.container .input--section .input--button {
   font-family: "Satisfy", cursive;
   border: 1px solid black;
   background: transparent;
 }
 
-.container .input--section #add--button:hover {
+.container .input--section .input--button:hover {
   background: white;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -84,7 +84,19 @@ body header {
           flex: 3;
 }
 
+.container .list .done--icon:hover {
+  color: orange;
+}
+
+.container .list .edit--icon:hover {
+  color: blue;
+}
+
 .container .list .delete--icon {
   margin-right: 0em;
+}
+
+.container .list .delete--icon:hover {
+  color: red;
 }
 /*# sourceMappingURL=style.css.map */
