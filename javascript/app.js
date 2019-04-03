@@ -2,6 +2,8 @@ $(document).ready(function() {
   $("#edit--button").hide();
   let userInput = "";
   let listItemNumber = 0;
+  let currentListItem;
+  let itemId;
   function userInputFetcher() {
     userInput = $("#input").val();
   }
@@ -28,7 +30,11 @@ $(document).ready(function() {
   });
 
   $("#edit--button").click(function() {
-    alert("Edited");
+    currentListItem.html($("#input").val());
+    currentListItem = "";
+    $("#add--button").show();
+    $("#edit--button").hide();
+    $("#input").val("");
   });
 
   $(document).on("click", ".delete--icon", function() {
@@ -46,11 +52,8 @@ $(document).ready(function() {
     //Set value of Edit Item in Input
     $("#input").val(item.html());
     $("#input").focus();
-
-    //Set the value of list item to that of Input
-    $("#input").on("keyup", function() {
-      item.html($(this).val());
-    });
+    itemId = item.prevObject.attr("id");
+    currentListItem = item;
   });
 
   $(document).on("click", ".done--icon", function() {
